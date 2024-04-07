@@ -1,22 +1,49 @@
-# AI-based Personal Finance Manager
+## Smarket - The smart marketplace
 
-**Project Description**: 
-The goal of this project is to create an AI-based personal finance manager. The application will track the user's income and expenses, categorize them, and provide insights on spending habits. It will also suggest ways to save money and improve financial health.
+Welcome to our innovative project, where we combine the power of LLM AI with AR (Argumented Reality) technology to revolutionize the way we sell and showcase products. Our software is designed to provide an immersive shopping experience that goes beyond traditional e-commerce platforms.
+Table of Contents
 
-**Features**:
-1. **Expense Tracking**: The application should be able to track the user's expenses by integrating with bank accounts or through manual entry.
-2. **Income Tracking**: Similarly, the application should track the user's income.
-3. **Categorization**: The application should categorize expenses into different buckets like groceries, utilities, entertainment, etc.
-4. **Spending Insights**: Based on the categorized data, the application should provide insights on spending habits.
-5. **Budgeting**: The application should allow users to set budgets for different categories and notify them when they are close to exceeding their budget.
-6. **Savings Suggestions**: Based on spending habits and income, the application should suggest potential areas for savings.
+    Introduction
+    Features
+    Getting Started
+    Installation
+    Usage
+    Contributing
+    License
+    Contact Us
 
-**AI Components**:
-1. **Natural Language Processing (NLP)**: For categorizing expenses and income, you can use NLP techniques to understand the context of each transaction.
-2. **Machine Learning (ML)**: You can use ML algorithms to analyze spending patterns and suggest ways to save money.
+Introduction
 
-Remember, while Mojo provides a great platform for developing machine learning models, you'll need to integrate it with a programming language like Python or Java to build the complete application.
+Our software aims to bridge the gap between online shopping and physical retail by offering a seamless blend of virtual reality and augmented reality experiences. With our cutting-edge technology, users can explore and interact with items in a lifelike manner, making it easier for them to make informed purchasing decisions.
+Features
 
-I hope this gives you a good starting point for your project! Happy coding! 😊
+    AI Personalization: Leverage advanced AI algorithms to recommend personalized product options based on user preferences and behavior.
+    AR Product Visualization: Experience products as if they were real, allowing users to visualize how items would look in their own space before purchase.
+    Interactive Virtual Showroom: Engage customers with interactive 3D models and animations, providing a dynamic and engaging shopping environment.
+    Real-time Inventory Management: Keep track of stock levels and manage inventory efficiently using our integrated system.
+    User-friendly Interface: A sleek and intuitive interface designed for ease of use, ensuring a smooth shopping experience for all users.
 
-OBS: Suggested project from copilot.
+Getting Started
+
+To get started with our software, simply follow these steps:
+
+    Sorry, is being developed.
+
+Installation
+
+Detailed installation instructions will be provided upon request. Please contact us at support@projectname.com for assistance.
+Usage
+
+To use our software, simply follow these steps:
+
+    Sorry, is being developed.
+
+Contributing
+
+We welcome contributions from the community! If you have ideas or suggestions for improvements, please submit them via our GitHub repository.
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+Contact Us
+
+For any questions, concerns, or feedback, please reach out to us at lucasmulato369@gmail.com . We are always here to help.
