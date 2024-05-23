@@ -58,4 +58,4 @@ It's welcome contributions from the community! If you have ideas or suggestions 
 For any questions, concerns, or feedback, please reach out to me at lucasmulato369@gmail.com. I am always here to help.
 
 ## License
-MIT: <https://mulato.mit-license.org/2016> 
+[MIT](https://github.com/lucasmulato/Smarket/blob/master/LICENSE)
