@@ -58,4 +58,4 @@ It's welcome contributions from the community! If you have ideas or suggestions 
 For any questions, concerns, or feedback, please reach out to me at lucasmulato369@gmail.com. I am always here to help.
 
 ## License
-[Lucas H. M. Vieira]()
+[Lucas H. M. Vieira](https://github.com/MinimalTechSolutions/Smarket/?tab=License-1-ov-file)
