@@ -2,14 +2,13 @@
 
 > Visual search + AR try-on + live shopping + AI assistant — em um único marketplace mobile.
 
-**Status atual:** Conceito + arquitetura definida. Repositório em estágio inicial (README + visão).  
-**Objetivo do MVP:** Entregar o primeiro pilar (visual search + checkout) funcional antes de expandir.
+**Status atual:** Conceito + arquitetura definida. Repositório em estágio inicial (README + visão).
 
 ---
 
 ## O que é o Smarket
 
-O Smarket não é um app de headset. É um app mobile (estilo Google Lens) que vira um marketplace completo:
+É um app mobile (estilo Google Lens) que vira um marketplace completo:
 
 1. Você vê um item na rua, revista ou foto
 2. Abre o Smarket e aponta a câmera
@@ -17,15 +16,10 @@ O Smarket não é um app de headset. É um app mobile (estilo Google Lens) que v
 4. Dentro do mesmo app: reviews, comparação de preços, try-on em AR no seu ambiente
 5. Live shopping nativo (sellers transmitindo o produto que você acabou de escanear)
 6. Assistente de IA que conversa, recomenda e ajuda a fechar a compra
-7. Compra sem sair do app
-
-A monetização prevista: comissão por venda, ads e potencial white-label/SDK para varejistas.
-
-O insight inicial veio do Apple Vision Pro, mas o foco real é **mobile** — onde todo mundo já tem câmera e conexão.
 
 ---
 
-## O gap que existe (e por que a ideia ainda é válida)
+## O gap que existe
 
 Nenhuma plataforma dominante une os quatro pilares em um só fluxo de marketplace:
 
@@ -35,10 +29,6 @@ Nenhuma plataforma dominante une os quatro pilares em um só fluxo de marketplac
 | AR try-on                | Sephora, Nike, IKEA, WebAR                           | Apps de marca isolados                            |
 | Live shopping            | TikTok Shop, Whatnot, Amazon Live, Shopee Live       | Plataformas separadas                             |
 | Assistente de IA         | Chatbots e recomendações genéricas                   | Raramente fecha o ciclo de compra no mesmo lugar  |
-
-Google já tem as peças (Lens + Shopping Graph + AR + Ads + YouTube Shopping), mas culturalmente conecta, não fecha a venda em um marketplace próprio. O diferencial do Smarket é a **unificação da experiência**.
-
-Mercados individuais continuam crescendo (visual search, AR commerce e live shopping com CAGRs fortes). A janela de unificação ainda está aberta — mas não por tempo indeterminado.
 
 ---
 
@@ -53,13 +43,11 @@ Mercados individuais continuam crescendo (visual search, AR commerce e live shop
 **Pagamentos:** Stripe ou Mercado Pago (com split de marketplace)  
 **Infra:** Docker → Cloud Run / Railway (Kubernetes só em escala)
 
-Custos estimados de MVP: ~US$ 50–100/mês no início.
-
 ---
 
-## Roadmap de implementação (recomendado)
+## Roadmap de implementação
 
-Não construir tudo de uma vez. Prioridade absoluta: um pilar forte primeiro.
+Não construir tudo de uma vez.
 
 | Fase | Semanas | Entrega principal                          | Objetivo                          |
 |------|---------|--------------------------------------------|-----------------------------------|
@@ -106,4 +94,4 @@ Lucas H. M. Vieira
 
 ---
 
-**A ideia é válida. O gap existe. O diferencial não é tecnologia isolada — é a unificação da experiência. A execução (começando pequeno e bem) decide se vira produto.**
+**O gap existe. O diferencial não é tecnologia isolada — é a unificação da experiência. A execução (começando pequeno e bem) decide se vira produto.**
