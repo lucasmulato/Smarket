@@ -1,0 +1,7 @@
+# Private planning
+plan.md
+
+# Environment & secrets
+.env
+.env.local
+*.pem
