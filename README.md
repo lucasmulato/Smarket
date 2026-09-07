@@ -1,61 +1,109 @@
-# Smarket | A smart marketplace
+# Smarket
 
-Welcome to this innovative project, where it's combine the power of LLM AI with AR (Argumented Reality) technology to revolutionize the way we sell or buy and showcase products. The software is designed to provide an immersive shopping experience that goes beyond traditional e-commerce platforms.
+> Visual search + AR try-on + live shopping + AI assistant — em um único marketplace mobile.
 
-## Table of Contents
+**Status atual:** Conceito + arquitetura definida. Repositório em estágio inicial (README + visão).  
+**Objetivo do MVP:** Entregar o primeiro pilar (visual search + checkout) funcional antes de expandir.
 
-[Introduction](https://github.com/lucasmulato/Smarket#Introduction)
+---
 
-[Features](https://github.com/lucasmulato/Smarket#Features)
+## O que é o Smarket
 
-[Getting Started](https://github.com/lucasmulato/Smarket#Getting%20Started)
+O Smarket não é um app de headset. É um app mobile (estilo Google Lens) que vira um marketplace completo:
 
-[Installation](https://github.com/lucasmulato/Smarket#Installation)
+1. Você vê um item na rua, revista ou foto
+2. Abre o Smarket e aponta a câmera
+3. O app reconhece o item (ou similares) e mostra onde comprar
+4. Dentro do mesmo app: reviews, comparação de preços, try-on em AR no seu ambiente
+5. Live shopping nativo (sellers transmitindo o produto que você acabou de escanear)
+6. Assistente de IA que conversa, recomenda e ajuda a fechar a compra
+7. Compra sem sair do app
 
-[Usage](https://github.com/lucasmulato/Smarket#Usage)
+A monetização prevista: comissão por venda, ads e potencial white-label/SDK para varejistas.
 
-[Contributing](https://github.com/lucasmulato/Smarket#Contributing)
+O insight inicial veio do Apple Vision Pro, mas o foco real é **mobile** — onde todo mundo já tem câmera e conexão.
 
-[Contact Us](https://github.com/lucasmulato/Smarket#Contact%20Us)
+---
 
-[License](https://github.com/lucasmulato/Smarket#License)
+## O gap que existe (e por que a ideia ainda é válida)
 
-## Introduction
-Our software aims to bridge the gap between online shopping and physical retail by offering a seamless blend of virtual reality and augmented reality experiences. With our cutting-edge technology, users can explore and interact with items in a lifelike manner, making it easier for them to make informed purchasing decisions.
+Nenhuma plataforma dominante une os quatro pilares em um só fluxo de marketplace:
 
-## Features
-[AI Personalization](https://www.techtarget.com/searchenterpriseai/feature/8-examples-of-AI-personalization-across-industries): Leverage advanced AI algorithms to recommend personalized product options based on user preferences and behavior.
+| Pilar                    | O que já existe                                      | Limite atual                                      |
+|--------------------------|------------------------------------------------------|---------------------------------------------------|
+| Visual search universal  | Google Lens, Pinterest Lens, Amazon StyleSnap        | Redireciona para fora ou fica preso no próprio catálogo |
+| AR try-on                | Sephora, Nike, IKEA, WebAR                           | Apps de marca isolados                            |
+| Live shopping            | TikTok Shop, Whatnot, Amazon Live, Shopee Live       | Plataformas separadas                             |
+| Assistente de IA         | Chatbots e recomendações genéricas                   | Raramente fecha o ciclo de compra no mesmo lugar  |
 
-[AR Product Visualization](https://www.g2.com/categories/ar-visualization#learn-more): Experience products as if they were real, allowing users to visualize how items would look in their own space before purchase.
+Google já tem as peças (Lens + Shopping Graph + AR + Ads + YouTube Shopping), mas culturalmente conecta, não fecha a venda em um marketplace próprio. O diferencial do Smarket é a **unificação da experiência**.
 
-Interactive [Virtual Showroom](https://www.shopify.com/retail/digital-virtual-showroom): Engage customers with interactive 3D models and animations, providing a dynamic and engaging shopping environment.
+Mercados individuais continuam crescendo (visual search, AR commerce e live shopping com CAGRs fortes). A janela de unificação ainda está aberta — mas não por tempo indeterminado.
 
-Real-time [Inventory Management](https://www.shopify.com/retail/digital-virtual-showroom): Keep track of stock levels and manage inventory efficiently using our integrated system.
+---
 
-User-friendly Interface: A sleek and intuitive interface designed for ease of use, ensuring a smooth shopping experience for all users.
+## Arquitetura técnica do MVP (resumo)
 
-## Getting Started
-To get started with our software, simply follow these steps:
+**Frontend mobile:** React Native ou Flutter (câmera nativa + WebView para WebAR)  
+**Backend:** FastAPI (Python) + PostgreSQL + pgvector + Redis + Celery  
+**Visual search:** Cloud Vision / CLIP embeddings + busca por similaridade no pgvector (fallback para APIs externas)  
+**AR:** Google Model Viewer / WebAR (8th Wall, Three.js + WebXR)  
+**Live:** WebRTC ou RTMP + WebSocket para chat  
+**IA:** LLM (GPT-4o-mini / Claude Haiku) + LangChain + RAG  
+**Pagamentos:** Stripe ou Mercado Pago (com split de marketplace)  
+**Infra:** Docker → Cloud Run / Railway (Kubernetes só em escala)
 
-```text
-Sorry, still in development.
-```
+Custos estimados de MVP: ~US$ 50–100/mês no início.
 
-## Installation
-Detailed installation instructions will be provided upon request. Please contact me at lucasmulato369@gmail.com for assistance.
+---
 
-### Usage
-To use our software, simply follow these steps:
+## Roadmap de implementação (recomendado)
 
-```text
-Sorry, still in development.
-```
+Não construir tudo de uma vez. Prioridade absoluta: um pilar forte primeiro.
 
-## Contributing
-It's welcome contributions from the community! If you have ideas or suggestions for improvements, please submit them via this GitHub repository.
+| Fase | Semanas | Entrega principal                          | Objetivo                          |
+|------|---------|--------------------------------------------|-----------------------------------|
+| 1    | 1–4     | Visual search básico (foto → resultados)   | Provar matching e UX de discovery |
+| 2    | 5–8     | Catálogo de sellers + checkout             | Fechar o ciclo de compra          |
+| 3    | 9–12    | AR try-on (Model Viewer / WebAR)           | Aumentar conversão e confiança    |
+| 4    | 13–16   | Assistente de IA com RAG                   | Personalização e retenção         |
+| 5    | 17–20   | Live shopping (WebRTC + chat)              | Engagement e vendas em tempo real |
+| 6    | 21–24   | Polish, testes, deploy e demo em vídeo     | Pronto para tração / pitch        |
 
-## Contact Us
-For any questions, concerns, or feedback, please reach out to me at lucasmulato369@gmail.com. I am always here to help.
+**Sugestão de go-to-market inicial:**  
+Começar com visual search + checkout. Quando tiver tração e sellers, adicionar AR. Depois live e IA.
 
-## License
-[Lucas H. M. Vieira](https://github.com/MinimalTechSolutions/Smarket/?tab=License-1-ov-file)
+Caminhos mais realistas:
+- Marketplace independente (B2C) em nicho
+- Plataforma white-label / SDK para varejistas (B2B)
+- Aquisição por player que quer entrar no espaço (Shopify, varejistas grandes, etc.)
+
+---
+
+## Estado atual do repositório
+
+Este repositório ainda está em estágio de **visão e planejamento**.  
+Não há código de produto, protótipo funcional nem demo pública.
+
+O próximo passo de maior valor é transformar esta visão em um MVP mínimo e demonstrável (Fase 1 + 2).
+
+---
+
+## Como contribuir / próximos passos
+
+1. Definir vertical inicial (moda, calçados, casa, etc.)
+2. Montar catálogo seed (mesmo que pequeno)
+3. Implementar o fluxo de visual search + resultados + checkout
+4. Gravar demo em vídeo do fluxo ponta a ponta
+5. Iterar com feedback real de usuários e sellers
+
+---
+
+## Contato
+
+Lucas H. M. Vieira  
+[lucasmulato369@gmail.com](mailto:lucasmulato369@gmail.com)
+
+---
+
+**A ideia é válida. O gap existe. O diferencial não é tecnologia isolada — é a unificação da experiência. A execução (começando pequeno e bem) decide se vira produto.**
